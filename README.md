@@ -1,5 +1,6 @@
 # 2d-SPH-solver
 High performance computing coursework: 
+
 The objective of this coursework is to write a high-performance parallel, object-oriented, C++ code which will solve a 2d smoothed particle hydrodynamic (SPH) formulation of the N-S equations.
 
 The file "repository.log" is the git log generated under the Linux environment.
