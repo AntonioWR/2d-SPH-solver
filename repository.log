@@ -1,0 +1,345 @@
+commit f9c7534b721851e7291cb6edf74eb5e4ca375c38
+Author: Yuandong <ydw18@ic.ac.uk>
+Date:   Wed Mar 24 12:37:56 2021 +0000
+
+    commit-Final The comments are updated. Everthing is now completed.
+
+M	cw/Makefile
+M	cw/SPH.cpp
+M	cw/SPH.h
+D	cw/cw.mk
+M	cw/energy.txt
+M	cw/main.cpp
+M	cw/main.o
+M	cw/myclass.o
+M	cw/myprog
+M	cw/position.txt
+M	cw/repository.log
+A	cw/submission file/Makefile
+A	cw/submission file/SPH.cpp
+A	cw/submission file/SPH.h
+A	cw/submission file/main.cpp
+A	cw/submission file/repository.log
+
+commit e489f3ec9d6c7a16e6dc29faf72cb9135690e34f
+Author: Yuandong <ydw18@ic.ac.uk>
+Date:   Mon Mar 22 22:35:26 2021 +0000
+
+    The viscous force can be calculatd by parellelization too, overall the improvement comparing to the serial code is about 10%.
+
+M	cw/Makefile
+M	cw/SPH.cpp
+M	cw/energy.txt
+M	cw/main.o
+M	cw/myclass.o
+M	cw/myprog
+M	cw/position.txt
+
+commit 8570f204a2783bf4f6f830340a8ef5b984108f11
+Author: Yuandong <ydw18@ic.ac.uk>
+Date:   Mon Mar 22 18:39:49 2021 +0000
+
+    Some bugs fixed, no the program can calculate rho_i and pressure force in parallel.
+
+M	cw/Makefile
+M	cw/SPH.cpp
+M	cw/cw.mk
+M	cw/energy.txt
+M	cw/main.cpp
+M	cw/main.o
+M	cw/myclass.o
+M	cw/myprog
+M	cw/position.txt
+
+commit 66fad8eaee0ed9711ce7a354f88c3189501a5d2d
+Author: Yuandong <ydw18@ic.ac.uk>
+Date:   Sun Mar 21 22:27:58 2021 +0000
+
+    Commit 3.7- rho_i is now computed with MPI, but the total runtime is longer than the serial one.
+
+M	cw/SPH.cpp
+M	cw/SPH.h
+M	cw/energy.txt
+M	cw/main.cpp
+M	cw/main.o
+M	cw/myclass.o
+M	cw/myprog
+M	cw/position.txt
+
+commit 2218c2734835275a9f9e6adfb4dc8bbfc189606b
+Author: Yuandong <ydw18@ic.ac.uk>
+Date:   Sun Mar 21 13:48:12 2021 +0000
+
+    Commit 3.5-some part of the viscous force and pressureforce is now explicitly pre-computed to save time.
+
+M	cw/Makefile
+D	cw/Makefilebc
+M	cw/SPH.cpp
+M	cw/energy.txt
+M	cw/main.cpp
+M	cw/main.o
+M	cw/myclass.o
+M	cw/myprog
+M	cw/position.txt
+
+commit 57dc9819c593c8c543c6bdd9f21640bb03d78970
+Author: Yuandong <ydw18@ic.ac.uk>
+Date:   Sat Mar 20 23:55:34 2021 +0000
+
+    The class is now separated into the header file and a cpp file, the content in the makefile is updated, mpi compiler is now used, some basic mpi part has been implemented.
+
+M	cw/Makefile
+A	cw/Makefilebc
+M	cw/SPH.cpp
+M	cw/SPH.h
+M	cw/cw.project
+M	cw/energy.txt
+D	cw/main
+M	cw/main.cpp
+M	cw/main.o
+A	cw/myclass.o
+A	cw/myprog
+M	cw/position.txt
+
+commit 2cf1a963ab5b2c6070527a419e39b6e652a917d6
+Author: Yuandong <ydw18@ic.ac.uk>
+Date:   Sat Mar 20 14:57:37 2021 +0000
+
+    Commit 3.1, some minor bug fixed in the viscous force calculation, the serial programming is now completed, the energy and location at last position will now be output in root directory.
+
+M	cw/SPH.h
+D	cw/ay.txt
+A	cw/energy.txt
+D	cw/fgy.txt
+D	cw/fpy.txt
+D	cw/fvy.txt
+M	cw/main
+M	cw/main.cpp
+M	cw/main.o
+D	cw/pos.txt
+D	cw/pos0.txt
+A	cw/position.txt
+D	cw/r.txt
+D	cw/rhoi.txt
+D	cw/theta.txt
+D	cw/vy.txt
+D	cw/y.txt
+
+commit 6fa9531b55650ecf7561844ed0a55c66515f748f
+Author: Yuandong <ydw18@ic.ac.uk>
+Date:   Fri Mar 19 01:08:08 2021 +0000
+
+    The droplet initial condition is now achieved by Vogel's model such that the inter-particle spacing is approximately equal to h.
+
+M	cw/Debug/main.cpp.o
+M	cw/SPH.h
+M	cw/main
+M	cw/main.o
+M	cw/r.txt
+M	cw/theta.txt
+
+commit 05fddaccdcc8e374a2c21fc55f55216f624d57fc
+Author: Yuandong <ydw18@ic.ac.uk>
+Date:   Fri Mar 19 00:00:09 2021 +0000
+
+    The initial condition for dambreak and blockdrop is now fixed and tested with matlab, the interval between particles is not set to h.
+
+M	cw/SPH.h
+M	cw/ay.txt
+M	cw/fgy.txt
+M	cw/fpy.txt
+M	cw/fvy.txt
+M	cw/main
+M	cw/main.cpp
+M	cw/main.o
+A	cw/pos.txt
+A	cw/pos0.txt
+A	cw/r.txt
+M	cw/rhoi.txt
+A	cw/theta.txt
+M	cw/vy.txt
+M	cw/y.txt
+
+commit 167565a6be99c6db3c037bb17776f7a8f8af3d3f
+Author: Yuandong <ydw18@ic.ac.uk>
+Date:   Thu Mar 18 01:18:38 2021 +0000
+
+    The switch statement used in the main.cpp was put into the SPH.h header file as a member function.
+
+M	cw/Debug/main.cpp.o
+M	cw/SPH.h
+M	cw/cw.mk
+M	cw/main
+M	cw/main.cpp
+M	cw/main.o
+
+commit 50ba707556051996e4e63acb92bfbfc2a867d3ca
+Author: Yuandong <ydw18@ic.ac.uk>
+Date:   Thu Mar 18 00:20:27 2021 +0000
+
+    The explicit euler forward scheme is applied to calculate the velocity and location as time progresses, some useful values generated during each loop is output to verify if the result is sensible.
+
+M	cw/Debug/main.cpp.o
+M	cw/SPH.h
+A	cw/ay.txt
+M	cw/cw.mk
+A	cw/fgy.txt
+A	cw/fpy.txt
+A	cw/fvy.txt
+M	cw/main
+M	cw/main.o
+A	cw/rhoi.txt
+A	cw/vy.txt
+A	cw/y.txt
+
+commit 90efcda08c4fe34c9f30dfc3b3cac179ca300508
+Author: Yuandong <ydw18@ic.ac.uk>
+Date:   Mon Mar 15 00:10:50 2021 +0000
+
+    Commit 1.6--The gravity force array is generated.
+
+M	cw/SPH.h
+M	cw/main
+M	cw/main.o
+
+commit 4ba46ac8f1140aef98301a9fd70175cac8f96f3a
+Author: Yuandong <ydw18@ic.ac.uk>
+Date:   Sun Mar 14 21:06:53 2021 +0000
+
+    The first four steps in the algorithm is now completed, the viscous force was tested with zero inital velocity and output zeros which should be valid.
+
+M	cw/SPH.h
+M	cw/main
+M	cw/main.cpp
+M	cw/main.o
+
+commit 3811be0287d466ef037eafaf748dfc1b207169cc
+Author: Yuandong <ydw18@ic.ac.uk>
+Date:   Sun Mar 14 14:32:38 2021 +0000
+
+    The density calculation is implemented in the SPHsolver function.
+
+M	cw/Debug/main.cpp.o
+M	cw/SPH.h
+M	cw/main
+M	cw/main.cpp
+M	cw/main.o
+
+commit 516ea08032262f6bbe69b27f40f26c464aa28ad3
+Author: Yuandong <ydw18@ic.ac.uk>
+Date:   Sun Mar 14 01:50:07 2021 +0000
+
+    Commit 1.5--The SPHq and SPHsolver is now implemented and seems to work just fine
+
+M	cw/Debug/main.cpp.o
+M	cw/SPH.h
+M	cw/cw.mk
+M	cw/main
+M	cw/main.cpp
+M	cw/main.o
+
+commit 3b0fd7de35cf5b0488334ca7544396d8a8b9b661
+Author: Yuandong <ydw18@ic.ac.uk>
+Date:   Sat Mar 13 20:42:19 2021 +0000
+
+    The get location member function is now implemented and it's working properly. the coordinates of particles are now input to the class.
+
+M	cw/Debug/main.cpp.o
+M	cw/SPH.h
+M	cw/main
+M	cw/main.cpp
+M	cw/main.o
+
+commit d93226a6a5871c96d90a51d8d6f633c678679c08
+Author: Yuandong <ydw18@ic.ac.uk>
+Date:   Sat Mar 13 20:10:28 2021 +0000
+
+    Commit 1.4--The parameter setter 'setPara' is now implemented into the header file and tested. Some of the variables are set to be static.
+
+M	cw/Debug/main.cpp.o
+M	cw/Makefile
+M	cw/SPH.h
+M	cw/main
+M	cw/main.cpp
+M	cw/main.o
+
+commit 3cbd66ac62cfe64e13b7075d62c54e5d11817f11
+Author: Yuandong <ydw18@ic.ac.uk>
+Date:   Sat Mar 13 19:13:49 2021 +0000
+
+    Commit 1.2--The latter three initial conditions are set up and checked, the format is also updated.
+
+M	cw/Debug/main.cpp.o
+M	cw/main
+M	cw/main.cpp
+M	cw/main.o
+
+commit f6e1c319735a14f13fea943786925ddd22911303
+Author: Yuandong <ydw18@ic.ac.uk>
+Date:   Sat Mar 13 18:38:29 2021 +0000
+
+    The first three initial conditions input are now completed and checked
+
+M	cw/Debug/main.cpp.o
+M	cw/cw.mk
+M	cw/cw.txt
+M	cw/main
+M	cw/main.cpp
+M	cw/main.o
+D	cw/myhead.o
+
+commit e23816f714d00f7f728a6d095d0d98cc95219284
+Author: Yuandong <ydw18@ic.ac.uk>
+Date:   Sat Mar 13 11:42:32 2021 +0000
+
+    Commit 1.1 Finish the static variable definition, setter also introduced to pass in parameters by using the boost program option.
+
+M	cw/main.cpp
+
+commit d06968d00a1e5a9c89530ddf1e1baf97aa93a63c
+Author: Yuandong <ydw18@ic.ac.uk>
+Date:   Sat Mar 13 10:30:11 2021 +0000
+
+    commit3.0
+
+A	cw/Debug/SPH.cpp.o
+A	cw/Debug/SPH.cpp.o.d
+M	cw/Debug/main.cpp.o
+M	cw/Debug/main.cpp.o.d
+M	cw/Makefile
+A	cw/SPH.cpp
+M	cw/SPH.h
+M	cw/cw.mk
+M	cw/cw.project
+M	cw/cw.txt
+M	cw/main
+M	cw/main.cpp
+M	cw/main.o
+A	cw/myhead.o
+A	cw/repository.log
+
+commit cbef4aab5705cd23a0b48c2f6b3361577ffe1689
+Author: Yuandong <ydw18@ic.ac.uk>
+Date:   Wed Mar 10 23:15:01 2021 +0000
+
+    2nd commit
+
+M	cw/Makefile
+
+commit 055b326283973483310744955b45e60a13e1ec83
+Author: Yuandong <ydw18@ic.ac.uk>
+Date:   Wed Mar 10 23:12:15 2021 +0000
+
+    1st commit
+
+A	cw/Debug/.d
+A	cw/Debug/main.cpp.o
+A	cw/Debug/main.cpp.o.d
+A	cw/Makefile
+A	cw/SPH.h
+A	cw/cw.mk
+A	cw/cw.project
+A	cw/cw.txt
+A	cw/main
+A	cw/main.cpp
+A	cw/main.o
